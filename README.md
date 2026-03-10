@@ -1,4 +1,6 @@
-# bun-react-template
+# React deep dive
+
+Deep dive into the inner workings of react
 
 To install dependencies:
 

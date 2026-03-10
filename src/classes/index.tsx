@@ -1,13 +1,22 @@
-/**
- * This file is the entry point for the React app, it sets up the root
- * element and renders the App component to the DOM.
- *
- * It is included in `src/index.html`.
- */
-
-import { StrictMode } from "react";
+import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "./App";
+
+const parts: string[] = ["hooks"];
+
+const App = () => {
+  const [state, setState] = useState<string>("");
+  return (
+    <div>
+      <h1>{state}</h1>
+      <label htmlFor="state-input">State value</label>
+      <input
+        id="state-input"
+        value={state}
+        onChange={(e) => setState(e.target.value)}
+      />
+    </div>
+  );
+};
 
 const elem = document.getElementById("root")!;
 const app = (
