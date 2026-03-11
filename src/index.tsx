@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-const parts: string[] = ["hooks"];
+const parts: string[] = ["hooks", "classes"];
 
 const App = () => {
   return (

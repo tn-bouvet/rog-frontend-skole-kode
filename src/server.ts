@@ -1,6 +1,7 @@
 import { serve } from "bun";
 import index from "./index.html";
 import hooks from "./hooks/index.html";
+import classes from "./classes/index.html";
 
 const server = serve({
   hostname: "localhost",
@@ -9,6 +10,7 @@ const server = serve({
     // Serve index.html for all unmatched routes.
     "/*": index,
     "/hooks": hooks,
+    "/classes": classes,
   },
 
   // development: process.env.NODE_ENV !== "production" && {
