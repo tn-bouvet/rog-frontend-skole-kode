@@ -1,39 +1,53 @@
-import { StrictMode, useState } from "react";
+import {
+  StrictMode,
+  useState,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 import { createRoot } from "react-dom/client";
-import { ClassBased } from "./ClassBased";
-import { FunctionBased } from "./FunctionBased";
 
 const App = () => {
-  const [state1, setState1] = useState<number>(1);
-  const [state2, setState2] = useState<number>(1);
-  return (
-    <>
-      <div>
-        {state1 > 5 && <ClassBased num={state1} />}
-        <ClassBased
-          num={state1}
-          // key={state}
-        />
-        <input
-          type="number"
-          value={state1}
-          onChange={(e) => setState1(+e.target.value)}
-        />
-      </div>
+  const [swapStates, setSwapStates] = useState<boolean>(false);
+  let state1: string;
+  let setState1: Dispatch<SetStateAction<string>>;
+  let state2: string;
+  let setState2: Dispatch<SetStateAction<string>>;
 
-      <div>
-        {state2 > 5 && <FunctionBased num={state2} />}
-        <FunctionBased
-          num={state2}
-          // key={state}
-        />
+  if (swapStates) {
+    [state2, setState2] = useState<string>("");
+    [state1, setState1] = useState<string>("");
+  } else {
+    [state1, setState1] = useState<string>("");
+    [state2, setState2] = useState<string>("");
+  }
+
+  return (
+    <div className="wrapper">
+      <span>
+        <label htmlFor="input1">Input 1</label>
         <input
-          type="number"
-          value={state2}
-          onChange={(e) => setState2(+e.target.value)}
+          id="input1"
+          value={state1}
+          onChange={(e) => setState1(e.target.value)}
         />
-      </div>
-    </>
+      </span>
+      <span>
+        <label htmlFor="input2">Input 2</label>
+        <input
+          id="input2"
+          value={state2}
+          onChange={(e) => setState2(e.target.value)}
+        />
+      </span>
+      <span>
+        <label htmlFor="check">Swap</label>
+        <input
+          type="checkbox"
+          checked={swapStates}
+          onChange={(e) => setSwapStates(e.target.checked)}
+        />
+      </span>
+    </div>
   );
 };
 

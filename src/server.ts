@@ -4,8 +4,9 @@ import hooksPage from "./hooks/index.html";
 import classesPage from "./classes/index.html";
 import customHooksPage from "./customHooks/index.html";
 import jsxPage from "./jsx/index.html";
-import reactPage from "./react/index.html";
+// import reactPage from "./react/index.html";
 import contextPage from "./context/index.html";
+import statePage from "./state/index.html";
 
 const server = serve({
   hostname: "localhost",
@@ -17,17 +18,18 @@ const server = serve({
     "/classes": classesPage,
     "/custom-hooks": customHooksPage,
     "/jsx": jsxPage,
-    "/react": reactPage,
+    // "/react": reactPage,
     "/context": contextPage,
+    "/state": statePage,
   },
 
-  // development: process.env.NODE_ENV !== "production" && {
-  //   // Enable browser hot reloading in development
-  //   hmr: true,
-  //
-  //   // Echo console logs from the browser to the server
-  //   console: true,
-  // },
+  development: process.env.NODE_ENV !== "production" && {
+    // Enable browser hot reloading in development
+    hmr: true,
+
+    // Echo console logs from the browser to the server
+    console: true,
+  },
 });
 
 console.log(`🚀 Server running at ${server.url}`);

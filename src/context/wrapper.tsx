@@ -1,4 +1,4 @@
-import { createContext, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { context } from "./context";
 
 export const Wrapper = ({ children }: { children: ReactNode }) => {
