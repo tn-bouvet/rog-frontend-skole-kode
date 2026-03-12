@@ -4,6 +4,7 @@ import hooks from "./hooks/index.html";
 import classes from "./classes/index.html";
 import customHooks from "./customHooks/index.html";
 import jsx from "./jsx/index.html";
+import reactPage from "./react/index.html";
 
 const server = serve({
   hostname: "localhost",
@@ -15,6 +16,7 @@ const server = serve({
     "/classes": classes,
     "/custom-hooks": customHooks,
     "/jsx": jsx,
+    "/react": reactPage,
   },
 
   // development: process.env.NODE_ENV !== "production" && {
