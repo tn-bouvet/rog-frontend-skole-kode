@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { context } from "./context";
+import { useCustomContext } from "./context";
 
 export const Component = () => {
-  const { value, setValue } = useContext(context);
+  const { value, setValue } = useCustomContext();
   return (
     <div>
       <h1>Value is {value}</h1>

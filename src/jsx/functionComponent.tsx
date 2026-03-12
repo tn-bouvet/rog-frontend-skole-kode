@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export const FunctionComponent = ({
+export function FunctionComponent({
   onSubmit,
 }: {
   onSubmit?: (email: string, password: string) => void;
-}) => {
+}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -33,4 +33,4 @@ export const FunctionComponent = ({
   console.log("Functional", comps);
 
   return comps;
-};
+}

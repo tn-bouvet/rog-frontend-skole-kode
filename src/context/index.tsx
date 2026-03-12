@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Wrapper } from "./wrapper";
 import { Component } from "./component";
+import { CustomProvider } from "./context";
 
 const ComponentWrapper = () => {
   return (
@@ -13,16 +13,20 @@ const ComponentWrapper = () => {
 };
 
 const App = () => {
-  console.log(<Component />);
   return (
-    <Wrapper>
-      <Component />
-      <div>
-        <h2>Nested tag</h2>
+    <>
+      <CustomProvider>
         <Component />
-      </div>
-      <ComponentWrapper />
-    </Wrapper>
+        <Component />
+        <div>
+          <CustomProvider>
+            <h2>Nested tag</h2>
+            <Component />
+          </CustomProvider>
+        </div>
+        <ComponentWrapper />
+      </CustomProvider>
+    </>
   );
 };
 

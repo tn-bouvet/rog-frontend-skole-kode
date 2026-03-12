@@ -10,6 +10,10 @@ export class ClassBased extends Component<Props> {
     super(props);
   }
 
+  override componentWillUnmount(): void {
+    console.log("Class based component unmounting");
+  }
+
   override render() {
     return <h1>Class based component #{this.props.num}</h1>;
   }

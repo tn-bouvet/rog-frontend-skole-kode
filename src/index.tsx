@@ -6,7 +6,6 @@ const parts: string[] = [
   "jsx",
   "classes",
   "custom-hooks",
-  "hooks",
   "state",
   "context",
 ];

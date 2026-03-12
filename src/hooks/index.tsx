@@ -1,8 +1,6 @@
 import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const parts: string[] = ["hooks"];
-
 const App = () => {
   const [state, setState] = useState<string>("");
   return (

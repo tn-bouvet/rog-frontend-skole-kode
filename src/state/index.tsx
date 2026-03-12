@@ -1,5 +1,6 @@
 import {
   StrictMode,
+  useEffect,
   useState,
   type Dispatch,
   type SetStateAction,
@@ -8,18 +9,22 @@ import { createRoot } from "react-dom/client";
 
 const App = () => {
   const [swapStates, setSwapStates] = useState<boolean>(false);
-  let state1: string;
-  let setState1: Dispatch<SetStateAction<string>>;
+  let state1: number;
+  let setState1: Dispatch<SetStateAction<number>>;
   let state2: string;
   let setState2: Dispatch<SetStateAction<string>>;
 
   if (swapStates) {
     [state2, setState2] = useState<string>("");
-    [state1, setState1] = useState<string>("");
+    [state1, setState1] = useState<number>(0);
   } else {
-    [state1, setState1] = useState<string>("");
+    [state1, setState1] = useState<number>(0);
     [state2, setState2] = useState<string>("");
   }
+
+  useEffect(() => {
+    console.log("state1:", state1);
+  }, [state1]);
 
   return (
     <div className="wrapper">
@@ -28,7 +33,7 @@ const App = () => {
         <input
           id="input1"
           value={state1}
-          onChange={(e) => setState1(e.target.value)}
+          onChange={(e) => setState1(+e.target.value)}
         />
       </span>
       <span>

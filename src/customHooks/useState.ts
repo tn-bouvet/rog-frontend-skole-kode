@@ -14,6 +14,7 @@ export const useState = <T>(initialValue: T) => {
 
   const setState = (newValue: T) => {
     hooks[currentIndex] = newValue;
+    console.log(hooks);
     forceRerender((d) => d + 1);
   };
 

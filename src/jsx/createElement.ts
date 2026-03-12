@@ -1,5 +1,7 @@
 import { createElement, useState } from "react";
 
+const Comp = () => "adwd";
+
 export const CreateElement = ({
   onSubmit,
 }: {
