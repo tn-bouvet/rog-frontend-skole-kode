@@ -1,22 +1,24 @@
 import { serve } from "bun";
-import index from "./index.html";
-import hooks from "./hooks/index.html";
-import classes from "./classes/index.html";
-import customHooks from "./customHooks/index.html";
-import jsx from "./jsx/index.html";
+import indexPage from "./index.html";
+import hooksPage from "./hooks/index.html";
+import classesPage from "./classes/index.html";
+import customHooksPage from "./customHooks/index.html";
+import jsxPage from "./jsx/index.html";
 import reactPage from "./react/index.html";
+import contextPage from "./context/index.html";
 
 const server = serve({
   hostname: "localhost",
   port: 3005,
   routes: {
     // Serve index.html for all unmatched routes.
-    "/*": index,
-    "/hooks": hooks,
-    "/classes": classes,
-    "/custom-hooks": customHooks,
-    "/jsx": jsx,
+    "/*": indexPage,
+    "/hooks": hooksPage,
+    "/classes": classesPage,
+    "/custom-hooks": customHooksPage,
+    "/jsx": jsxPage,
     "/react": reactPage,
+    "/context": contextPage,
   },
 
   // development: process.env.NODE_ENV !== "production" && {

@@ -1,27 +1,30 @@
-import { StrictMode } from "react";
+import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
-
-const parts: string[] = [
-  "react",
-  "jsx",
-  "classes",
-  "custom-hooks",
-  "hooks",
-  "state",
-  "context",
-];
+import { Wrapper } from "./wrapper";
+import { Component } from "./component";
 
 const App = () => {
   return (
-    <ul>
-      {parts.map((p) => (
-        <li>
-          <a href={p}>{p.replace("-", " ")}</a>
-        </li>
-      ))}
-    </ul>
+    <Wrapper>
+      <Component />
+      <Component />
+      <Component />
+    </Wrapper>
   );
 };
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 const elem = document.getElementById("root")!;
 const app = (
