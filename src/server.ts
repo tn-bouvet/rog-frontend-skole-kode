@@ -2,6 +2,8 @@ import { serve } from "bun";
 import index from "./index.html";
 import hooks from "./hooks/index.html";
 import classes from "./classes/index.html";
+import customHooks from "./customHooks/index.html";
+import jsx from "./jsx/index.html";
 
 const server = serve({
   hostname: "localhost",
@@ -11,6 +13,8 @@ const server = serve({
     "/*": index,
     "/hooks": hooks,
     "/classes": classes,
+    "/custom-hooks": customHooks,
+    "/jsx": jsx,
   },
 
   // development: process.env.NODE_ENV !== "production" && {

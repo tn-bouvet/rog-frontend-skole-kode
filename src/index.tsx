@@ -1,14 +1,21 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-const parts: string[] = ["hooks", "classes"];
+const parts: string[] = [
+  "jsx",
+  "hooks",
+  "classes",
+  "state",
+  "context",
+  "custom-hooks",
+];
 
 const App = () => {
   return (
     <ul>
       {parts.map((p) => (
         <li>
-          <a href={p}>{p}</a>
+          <a href={p}>{p.replace("-", " ")}</a>
         </li>
       ))}
     </ul>
