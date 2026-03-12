@@ -1,23 +1,10 @@
-import { StrictMode, useState } from "react";
+import { StrictMode } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { Component } from "./component";
 
 const App = () => {
   return <Component />;
 };
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 const elem = document.getElementById("root")!;
 const app = (

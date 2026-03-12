@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 const parts: string[] = [
+  "react", // Why react? Imperative
   "jsx",
   "hooks",
   "classes",

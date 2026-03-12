@@ -8,7 +8,7 @@ export const FunctionComponent = ({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  return (
+  const comps = (
     <div className="wrapper">
       <span>
         <label htmlFor="email">Email</label>
@@ -29,4 +29,8 @@ export const FunctionComponent = ({
       <button onClick={() => onSubmit?.(email, password)}>Submit</button>
     </div>
   );
+
+  console.log("Functional", comps);
+
+  return comps;
 };

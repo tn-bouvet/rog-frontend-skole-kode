@@ -8,7 +8,7 @@ export const CreateElement = ({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  return createElement(
+  const comps = createElement(
     "div",
     { className: "wrapper" },
     createElement(
@@ -37,4 +37,7 @@ export const CreateElement = ({
       "Submit",
     ),
   );
+
+  console.log("createElement", comps);
+  return comps;
 };

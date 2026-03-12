@@ -1,4 +1,4 @@
-import { StrictMode, useState } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { FunctionComponent } from "./functionComponent";
 import { CreateElement } from "./createElement";
