@@ -4,7 +4,7 @@ import hooksPage from "./hooks/index.html";
 import classesPage from "./classes/index.html";
 import customHooksPage from "./customHooks/index.html";
 import jsxPage from "./jsx/index.html";
-// import reactPage from "./react/index.html";
+import reactPage from "./react/index.html";
 import contextPage from "./context/index.html";
 import statePage from "./state/index.html";
 
@@ -18,7 +18,7 @@ const server = serve({
     "/classes": classesPage,
     "/custom-hooks": customHooksPage,
     "/jsx": jsxPage,
-    // "/react": reactPage,
+    "/react": reactPage,
     "/context": contextPage,
     "/state": statePage,
   },

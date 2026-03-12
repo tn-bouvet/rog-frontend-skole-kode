@@ -15,7 +15,7 @@ const App = () => {
   return (
     <ul>
       {parts.map((p) => (
-        <li>
+        <li key={p}>
           <a href={p}>{p.replace("-", " ")}</a>
         </li>
       ))}
